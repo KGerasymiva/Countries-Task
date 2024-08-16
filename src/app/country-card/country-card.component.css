@@ -1,4 +1,4 @@
-.card{
+.card {
   border: saddlebrown 2px solid;
   border-radius: 10px;
   background-color: beige;
@@ -6,7 +6,7 @@
   width: 500px;
 }
 
-.card-header{
+.card-header {
   display: flex;
   font-weight: bold;
 }

@@ -1,21 +1,21 @@
-.home{
+.home {
   display: flex;
   justify-content: space-between;
 }
 
-.main{
- width: 400px;
+.main {
+  width: 400px;
 }
 
-app-random-countries{
+app-random-countries {
   margin-top: 20px;
 }
 
-.input-country{
+.input-country {
   margin: 15px;
   font-size: x-large;
 }
- input{
-   margin-left: 15px;
-   width: 300px;
- }
+input {
+  margin-left: 15px;
+  width: 300px;
+}

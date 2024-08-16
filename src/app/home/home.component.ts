@@ -1,10 +1,10 @@
-import {Component, DestroyRef, OnInit} from '@angular/core';
-import {RandomCountriesComponent} from "../random-countries/random-countries.component";
-import {RouterLink, RouterOutlet} from "@angular/router";
-import {FormsModule} from "@angular/forms";
-import {NgForOf} from "@angular/common";
-import {CountryInfoService} from "../country-info.service";
-import {MatFormField, MatLabel} from "@angular/material/form-field";
+import { Component, DestroyRef, OnInit } from '@angular/core';
+import { RandomCountriesComponent } from '../random-countries/random-countries.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { NgForOf } from '@angular/common';
+import { CountryInfoService } from '../country-info.service';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-home',
@@ -17,9 +17,9 @@ import {MatFormField, MatLabel} from "@angular/material/form-field";
     NgForOf,
     RouterOutlet,
     MatLabel,
-    MatFormField
+    MatFormField,
   ],
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   countries: any[] = [];
@@ -37,14 +37,12 @@ export class HomeComponent implements OnInit {
     if (this.searchTerm.length < 2) return;
 
     this.countryInfoService.getAvailableCountries().subscribe({
-      next: data => {
-
-        this.countries=data.filter(t=>{
-          const nm: string = t.name;
-          return nm.toLowerCase().includes(this.searchTerm.toLowerCase());
-          }
-        );
-      }
+      next: (data) => {
+        this.countries = data.filter((t) => {
+          const name: string = t.name;
+          return name.toLowerCase().includes(this.searchTerm.toLowerCase());
+        });
+      },
     });
   }
 }

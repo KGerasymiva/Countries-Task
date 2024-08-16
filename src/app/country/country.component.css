@@ -1,24 +1,21 @@
-button{
+button {
   padding: 10px;
   margin: 5px;
   border-radius: 7px;
   border: darkblue 2px solid;
 }
 
-p{
+p {
   padding-top: 20px;
   padding-left: 50px;
   font-size: xx-large;
   color: darkblue;
 }
 
-.selected{
+.selected {
   background-color: orange;
 }
 
-.back-button{
+.back-button {
   background-color: lightsteelblue;
-
-
 }
-

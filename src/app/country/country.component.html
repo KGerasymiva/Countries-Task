@@ -1,18 +1,19 @@
-<div >
+<div>
   <p>{{ country?.officialName }}</p>
 </div>
-<hr>
-<div >
-  <button *ngFor="let y of allYears"
-          (click)="changeYear(y)" [ngClass]="{ selected: y===year }">
-
-    {{ y }}
+<hr />
+<div>
+  <button
+    *ngFor="let yearItem of allYears"
+    (click)="changeYear(yearItem)"
+    [ngClass]="{ selected: yearItem === year }"
+  >
+    {{ yearItem }}
   </button>
   <button class="back-button" (click)="OnClick()">Back to Home</button>
 </div>
 <ul>
   <li *ngFor="let holiday of holidays">
-    {{ holiday.name }} on {{ holiday.date }}. Holiday type: {{holiday.types}}
+    {{ holiday.name }} on {{ holiday.date }}. Holiday type: {{ holiday.types }}
   </li>
 </ul>
-

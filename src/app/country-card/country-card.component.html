@@ -5,6 +5,12 @@
     </span>
   </div>
   <div>
-    <span>Next Holiday: {{ (item.nextHoliday?.name) ? item.nextHoliday?.name:'not available' }} on {{ item.nextHoliday?.date ? item.nextHoliday?.date: 'not available' }}</span>
+    <span
+      >Next Holiday:
+      {{ item.nextHoliday?.name ? item.nextHoliday?.name : 'not available' }} on
+      {{
+        item.nextHoliday?.date ? item.nextHoliday?.date : 'not available'
+      }}</span
+    >
   </div>
 </div>
