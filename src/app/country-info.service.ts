@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CountryInfoService {
-  private baseUrl = 'https://date.nager.at/api/v3';
+  private baseUrl = environment.apiUrl;
 
-  currentSearchPattern: string ='';
+  currentSearchPattern: string = '';
 
   constructor(private http: HttpClient) {}
 
@@ -32,4 +33,3 @@ export class CountryInfoService {
     return this.http.get<any[]>(url);
   }
 }
-
