@@ -3,7 +3,7 @@
 </div>
 <hr>
 <div >
-  <button *ngFor="let y of [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030]"
+  <button *ngFor="let y of allYears"
           (click)="changeYear(y)" [ngClass]="{ selected: y===year }">
 
     {{ y }}
