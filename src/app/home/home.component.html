@@ -1,0 +1,17 @@
+<div class="home">
+  <div class="main">
+    <div class="input-country">
+      <label for="1">Input country name</label>
+      <input id="1" class="ma" type="text" [(ngModel)]="searchTerm" (input)="searchCountries()" placeholder="Search for countries...">
+    </div>
+    <ul>
+      <li *ngFor="let country of countries">
+        <a [routerLink]="['/country', country.countryCode]">{{ country.name }}</a>
+      </li>
+    </ul>
+  </div>
+  <app-random-countries></app-random-countries>
+
+  <router-outlet></router-outlet>
+</div>
+

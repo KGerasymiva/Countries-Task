@@ -1,0 +1,17 @@
+.random-countries{
+  width: auto;
+}
+
+.random-list{
+  margin: 10px;
+
+}
+
+label {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.random-countries-item {
+  margin-bottom: 5px;
+}

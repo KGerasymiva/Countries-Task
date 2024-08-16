@@ -1,0 +1,8 @@
+<div class="random-countries">
+  <label class="mat-title-large">Random Countries</label>
+  <div class="random-list" >
+    <div *ngFor="let country of randomCountries" class="random-countries-item">
+      <app-country-card [item]="country"></app-country-card>
+    </div>
+  </div>
+</div>

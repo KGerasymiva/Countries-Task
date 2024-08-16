@@ -1,0 +1,18 @@
+<div >
+  <p>{{ country?.officialName }}</p>
+</div>
+<hr>
+<div >
+  <button *ngFor="let y of [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030]"
+          (click)="changeYear(y)" [ngClass]="{ selected: y===year }">
+
+    {{ y }}
+  </button>
+  <button class="back-button" (click)="OnClick()">Back to Home</button>
+</div>
+<ul>
+  <li *ngFor="let holiday of holidays">
+    {{ holiday.name }} on {{ holiday.date }}. Holiday type: {{holiday.types}}
+  </li>
+</ul>
+

@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-header">
+    <span class="mat-title-large">
+      {{ item.name }}
+    </span>
+  </div>
+  <div>
+    <span>Next Holiday: {{ (item.nextHoliday?.name) ? item.nextHoliday?.name:'not available' }} on {{ item.nextHoliday?.date ? item.nextHoliday?.date: 'not available' }}</span>
+  </div>
+</div>
